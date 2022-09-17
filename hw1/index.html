@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>Fake Google Meet</title>
+  </head>
+  <body>
+    <div class="screen">
+      <div class="main">
+        <img src="screenshot/my_icon.png" class="main_icon icon"/>
+        <img src="screenshot/mute.png" class="normal_icon" id="mute"/>
+        <p class="main_name">你</p>
+        <img src="screenshot/pin.png" class="normal_icon" id="pin"/>
+        <div class="main_bar_layer">
+          <img src="screenshot/main_bar.png" class="main_bar"/>
+        </div>
+      </div>
+      <div class="side">
+        <div class="grid" id="grid_one">
+          <div class="block" id="block_one">
+            <img src="screenshot/groot.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="small_icon icon" id="mute"/>
+            <p class="side_name">Groot</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+        <div class="grid" id="grid_two">
+          <div class="block" id="block_two">
+            <img src="screenshot/hulk.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="small_icon icon" id="mute"/>
+            <p class="side_name">Hulk</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+        <div class="grid" id="grid_three">
+          <div class="block" id="block_three">
+            <img src="screenshot/wanda.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="small_icon icon" id="mute"/>
+            <p class="side_name">Wanda</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+        <div class="grid" id="grid_four">
+          <div class="block" id="block_four">
+            <img src="screenshot/vision.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="small_icon icon" id="mute"/>
+            <p class="side_name">Vision</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+        <div class="grid" id="grid_five">
+          <div class="block" id="block_five">
+            <img src="screenshot/strange.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="small_icon icon" id="mute"/>
+            <p class="side_name">Dr. Strange</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="left_bottom">
+          <p>下午5:11  |  bax-kdhw-bds</p>
+        </div>
+        <div class="middle_bottom">
+          <div class="audio_checkbox option_button">
+            <input id="audio_switch" type="checkbox"/>
+            <p class="hint on">Turn&nbspon&nbspmicrophone</p>
+            <p class="hint off">Turn&nbspoff&nbspmicrophone</p>
+            <label for="audio_switch" style="z-index: 2;">
+              <img src="screenshot/audio.png" class="normal_icon icon" id="audio"/>
+            </label>
+            <img src="screenshot/noaudio.png" class="normal_icon icon" id="noaudio"/>
+          </div>
+          <div class="video_checkbox option_button">
+            <input id="video_switch" type="checkbox"/>
+            <p class="hint on">Turn&nbspon&nbspcamera</p>
+            <p class="hint off">Turn&nbspoff&nbspcamera</p>
+            <label for="video_switch" style="z-index: 2;">
+              <img src="screenshot/video.png" class="normal_icon icon" id="video"/>
+            </label>
+            <img src="screenshot/novideo.png" class="normal_icon icon" id="novideo"/>
+          </div>
+          <div class="button">
+            <p class="hint">Raise&nbsphand</p>
+            <img src="screenshot/raise_hand.png" class="normal_icon icon"/>
+          </div>
+          <div class="button">
+            <p class="hint">Present&nbspnow</p>
+            <img src="screenshot/present.png" class="normal_icon icon"/>
+          </div>
+          <div class="button">
+            <p class="hint">More&nbspoptions</p>
+            <img src="screenshot/more_options.png" class="normal_icon icon"/>
+          </div>
+          <div class="button">
+            <p class="hint">Leave&nbspcall</p>
+            <img src="screenshot/leave_call.png" class="normal_icon icon" id="leave_call"/>
+          </div>
+        </div>
+        <div class="right_bottom">
+          <div class="button">
+            <p class="hint" style="z-index: 2;">Meeting&nbspdetails</p>
+            <img src="screenshot/info.png" class="normal_icon icon"/>
+          </div>
+          <div class="button">
+            <p class="hint" style="z-index: 2;">Show&nbspeveryone</p>
+            <img src="screenshot/people.png" class="normal_icon icon" id="people"/>
+          </div>
+          <div class="button">
+            <p class="hint">Chat&nbspwith&nbspeveryone</p>
+            <img src="screenshot/chat.png" class="normal_icon icon"/>
+          </div>
+          <div class="button">
+            <p class="hint" id="activities">Activities</p>
+            <img src="screenshot/activities.png" class="normal_icon icon"/>
+          </div>
+          <div class="button">
+            <p class="hint" id="host_controls">Host&nbspcontrols</p>
+            <img src="screenshot/control.png" class="normal_icon icon"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
