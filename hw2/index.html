@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>Fake Google Meet</title>
+  </head>
+  <body>
+    <div class="screen">
+      <div class="main">
+        <div class="block me">
+          <img src="screenshot/my_icon.png" class="main_icon icon"/>
+          <img src="screenshot/mute.png" class="mute medium icon"/>
+          <img src="screenshot/leave.png" class="leave medium icon">
+          <p class="main_name">You</p>
+          <img src="screenshot/pin.png" class="pin medium icon"/>
+          <div class="main_bar_layer">
+            <img src="screenshot/main_bar.png" class="main_bar"/>
+          </div>
+        </div>
+      </div>
+      <div id="side">
+        <div class="block layout">
+          <div class="block_inside">
+            <img src="screenshot/groot.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="mute small icon"/>
+            <img src="screenshot/leave.png" class="leave small icon">
+            <p class="side_name">Groot</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+        <div class="block layout">
+          <div class="block_inside">
+            <img src="screenshot/hulk.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="mute small icon"/>
+            <img src="screenshot/leave.png" class="leave small icon">
+            <p class="side_name">Hulk</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+        <div class="block layout">
+          <div class="block_inside">
+            <img src="screenshot/wanda.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="mute small icon"/>
+            <img src="screenshot/leave.png" class="leave small icon">
+            <p class="side_name">Wanda</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+        <div class="block layout">
+          <div class="block_inside">
+            <img src="screenshot/vision.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="mute small icon"/>
+            <img src="screenshot/leave.png" class="leave small icon">
+            <p class="side_name">Vision</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+        <div class="block layout">
+          <div class="block_inside">
+            <img src="screenshot/strange.png" class="side_icon icon"/>
+            <img src="screenshot/mute.png" class="mute small icon"/>
+            <img src="screenshot/leave.png" class="leave small icon">
+            <p class="side_name">Dr. Strange</p>
+            <div class="side_bar_layer">
+              <img src="screenshot/side_bar.png" class="side_bar"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="left_bottom">
+          <p id="time">5:11 AM</p>
+          <p>&nbsp|  bax-kdhw-bds</p>
+        </div>
+        <div class="middle_bottom">
+          <div class="audio_checkbox button option">
+            <input id="audio_switch" type="checkbox"/>
+            <div class="img_box">
+              <label for="audio_switch" style="z-index: 2;">
+                <img src="screenshot/audio.png" class="medium icon" id="audio"/>
+              </label>
+              <img src="screenshot/noaudio.png" class="medium icon" id="noaudio"/>
+            </div>
+            <p class="hint on">Turn&nbspon&nbspmicrophone</p>
+            <p class="hint off">Turn&nbspoff&nbspmicrophone</p>
+          </div>
+          <div class="video_checkbox button option">
+            <input id="video_switch" type="checkbox"/>
+            <div class="img_box">
+              <label for="video_switch" style="z-index: 2;">
+                <img src="screenshot/video.png" class="medium icon" id="video"/>
+              </label>
+              <img src="screenshot/novideo.png" class="medium icon" id="novideo"/>
+            </div>
+            <p class="hint on">Turn&nbspon&nbspcamera</p>
+            <p class="hint off">Turn&nbspoff&nbspcamera</p>
+          </div>
+          <div class="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/raise_hand.png" class="medium icon"/>
+            </div>
+            <p class="hint no_switch">Raise&nbsphand</p>
+          </div>
+          <div class="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/present.png" class="medium icon"/>
+            </div>
+            <p class="hint no_switch">Present&nbspnow</p>
+          </div>
+          <div class="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/more_options.png" class="medium icon"/>
+            </div>
+            <p class="hint no_switch">More&nbspoptions</p>
+          </div>
+          <div class="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/leave_call.png" class="medium icon" id="leave_call"/>
+            </div>
+            <p class="hint no_switch">Leave&nbspcall</p>
+          </div>
+        </div>
+        <div class="right_bottom">
+          <div class ="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/plus.png" class="add medium icon">
+            </div>
+            <p class="hint no_switch">Add&nbspparticipant</p>
+          </div>
+          <div class="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/info.png" class="medium icon"/>
+            </div>
+            <p class="hint no_switch" style="z-index: 2;">Meeting&nbspdetails</p>
+          </div>
+          <div class="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/group.png" class="medium icon"/>
+            </div>
+            <div class="people_count">
+              <p class="num">6</p>
+            </div>
+            <p class="hint no_switch" style="z-index: 2;">Show&nbspeveryone</p>
+          </div>
+          <div class="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/chat.png" class="medium icon"/>
+            </div>
+            <p class="hint no_switch">Chat&nbspwith&nbspeveryone</p>
+          </div>
+          <div class="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/activities.png" class="medium icon"/>
+            </div>
+            <p class="hint no_switch" id="activities">Activities</p>
+          </div>
+          <div class="button nonoption">
+            <div class="img_box">
+              <img src="screenshot/control.png" class="medium icon"/>
+            </div>
+            <p class="hint no_switch" id="host_controls">Host&nbspcontrols</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer_below"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
