@@ -4,25 +4,30 @@ var main_bar = document.getElementsByClassName("main_bar")[0]
 var without_main = false
 var num = 6
 var block_template = document.getElementsByClassName("block")[1].innerHTML
+var numUsed = Array(16)
+var nameArr = ["", "You", "Groot", "Hulk", "Wanda", "Vision", "Dr. Strange", "Shang-Chi", "Thor", "Ms. Marvel", "Black Widow", "Spider Man", "Loki", "Hawkeye", "Iron Man", "Thanos"]
 
 // init
-for (let i = 0; i < leave.length; i++) {
+for (let i = 0; i <= 6; i++)
+	numUsed[i] = 1
+for (let i = 7; i <= 15; i++)
+	numUsed[i] = 0
+for (let i = 0; i < leave.length; i++)
 	leave[i].addEventListener("click", function() {leave_call(this.parentElement.parentElement)})
-}
-for (let i = 0; i < side_bar.length; i++) {
+for (let i = 0; i < side_bar.length; i++)
 	side_bar[i].addEventListener("click", function() {pin(this.parentElement.parentElement)})
-}
+
 document.getElementsByClassName("add")[0].addEventListener("click", function() {add_participant()})
 current_time()
 
 num = prompt("How many participants? [1-15]", 6)
 if (num > 6) {
-	for (let i = 7; i <= num; i++) {
-		let name = "user" + String(i)
-		create_block(name, "screenshot/shang-chi.png", false)
-	}
+	num = num > 15 ? 15 : num
+	for (let i = 7; i <= num; i++)
+		create_block(false, 0)
 }
 else if (num < 6) {
+	num = num < 1 ? 1 : num
 	let parentNode = document.getElementById("side")
 	let blocks = parentNode.getElementsByClassName("block")
 	for (let i = 6; i > num; i--)
@@ -33,8 +38,10 @@ update()
 
 // leave call
 function leave_call(node) {
+	var name = ""
 	num--
 	if (node.classList.contains("main")) {
+		name = node.innerText
 		var first_side_block = document.getElementById("side").getElementsByClassName("block")[num - 1]
 		node.getElementsByClassName("main_name")[0].innerText = first_side_block.getElementsByClassName("side_name")[0].innerText
 		node.getElementsByClassName("main_icon")[0].src = first_side_block.getElementsByClassName("side_icon")[0].src
@@ -45,21 +52,27 @@ function leave_call(node) {
 	}
 	else {
 		var block = node
+		name = block.getElementsByClassName("side_name")[0].innerText
 		block.remove()
 	}
+	for (let i = 1; i <= 15; i++)
+		if (name == nameArr[i]) {
+			numUsed[i] = 0
+			break
+		}
 	update()
 }
 
 // add participant
 function add_participant() {
-	var newName = prompt("What's your name?", "")
-	var newImg = prompt("What's your icon?", "")
+	if (num == 15)
+		return
 	if (num == 1) {
 		document.getElementById("side").style.display = "flex"
 		document.getElementsByClassName("main")[0].classList.remove("full_screen")
 	}
-	create_block(newName, newImg, false)
 	num++
+	create_block(false, 0)
 	update()
 }
 
@@ -100,7 +113,21 @@ function pin(node) {
 }
 
 // create side block
-function create_block(name, img, me) {
+function create_block(me, index) {
+	var name = ""
+	var img = ""
+	if (index == 0) {
+		for (let i = 1; i <= 15; i++)
+			if (numUsed[i] == 0) {
+				name = nameArr[i]
+				img = "screenshot/" + name + ".png"
+				numUsed[i] = 1
+				break
+			}
+	} else {
+		name = nameArr[index]
+		img = "screenshot/" + name + ".png"
+	}
 	var newNode = document.createElement("div")
 	newNode.innerHTML = block_template
 	newNode.className = "block layout"
@@ -118,8 +145,13 @@ function unpin() {
 	document.getElementsByClassName("main")[0].classList.add("hidden")
 	document.getElementById("side").classList.add("full_screen")
 	var name = document.getElementsByClassName("main_name")[0].innerText
-	var img = document.getElementsByClassName("main_icon")[0].src
-	create_block(name, img, document.getElementsByClassName("main")[0].getElementsByClassName("block")[0].classList.contains("me"))
+	var index = 0
+	for (let i = 1; i <= 15; i++)
+		if (name == nameArr[i]) {
+			index = i
+			break
+		}
+	create_block(document.getElementsByClassName("main")[0].getElementsByClassName("block")[0].classList.contains("me"), index)
 	update()
 }
 
@@ -217,4 +249,9 @@ function update() {
 				setWH(blocks, "50%", "14%")
 		}
 	}
+}
+
+// close
+function closeWindow() {
+	window.close()
 }

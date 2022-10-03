@@ -15,9 +15,11 @@ Using ***prompt*** to ask user input the initial user num, ranging from 1 to 15.
 ### Window Size
 I alter the window size dynamically with respect to user num.
 ### Add User
-I place an add user button on the right footer. Once it is clicked, the ***prompt*** function will pop up a question asking new user's name at first, and pop up another question asking new user's img url after the first question is answered. Afterward, a new user will be placed on the side window.
+I place an add user button on the right footer. Once it is clicked a new user will be placed on the side window.
 ### Time
 Using ***Date()*** object with ***getHours()***, ***getMinutes()*** function to update current time.
 ## Other function
 ### User Num
 The number above the ***show everyone*** button will be the same as current user num.
+### Leave Call
+The leave call button on the footer can be clicked. Once it is clicked, the web page will be closed.
