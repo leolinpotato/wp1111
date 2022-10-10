@@ -12,7 +12,8 @@ let timeIntervalId;
 
 export default function Dashboard({ remainFlagNum, gameOver }) {
   let [time, setTime] = useState(0);
-  let [sTime, setSTime] = useState(0);
+  /*let [sTime, setSTime] = useState(0);*/
+  let [stop, setStop] = useState(false);
 
   // Advanced TODO: Implement the timer on the Dashboard
   {/* Useful Hint: Try to understand the difference between time and sTime. */ }
@@ -20,7 +21,20 @@ export default function Dashboard({ remainFlagNum, gameOver }) {
   useEffect(() => {
     
   }, []);
-  
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (!gameOver && stop) {
+        setStop(false);
+        setTime(0);
+      }
+      else if (!gameOver)
+        setTime(time + 1)
+      else
+        setStop(true);
+    }, 1000)
+  })
+
   return (
     <div className="dashBoard" >
       <div id='dashBoard_col1' >
@@ -32,7 +46,7 @@ export default function Dashboard({ remainFlagNum, gameOver }) {
       <div id='dashBoard_col2' >
         <div className='dashBoard_col'>
           <p className='icon'>⏰</p>
-          {gameOver ? sTime : time}
+          {time}
         </div>
       </div>
     </div>
