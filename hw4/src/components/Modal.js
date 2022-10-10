@@ -14,18 +14,17 @@ export default function Modal({ restartGame, backToHome, win }) {
     useEffect(() => {
         setTimeout(() => {
             setRender(true);
-        }, 1000);
+        }, 2000);
     }, []);
-
     return (
         // Advanced TODO: Implement the structure of Modal
         // Useful Hint: style = {{opacity: 1 or 0 }}
-        <div className="modal">
+        <div className="modal" style={render ? {opacity: 1} : {opacity: 0}}>
           <div className="modalWrapper"/>
           <div className="modalContent">
             <div className="modalResult">{win ? "WIN" : "Game Over"}</div>
             <div className="modalBtnWrapper">
-              <div className="modalBtn" onClick={restartGame}>Try Again</div>
+              <div className="modalBtn" onClick={restartGame}>{win ? "New Game" : "Try Again"}</div>
               <div className="modalBtn" onClick={backToHome}>Back to Home</div>
             </div>
           </div>

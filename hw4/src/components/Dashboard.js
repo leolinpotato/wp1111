@@ -20,12 +20,7 @@ export default function Dashboard({ remainFlagNum, gameOver }) {
   useEffect(() => {
     
   }, []);
-
-  useEffect(() => {
-
-  }, []);
-
-
+  
   return (
     <div className="dashBoard" >
       <div id='dashBoard_col1' >

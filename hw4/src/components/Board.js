@@ -17,7 +17,7 @@ import React, { useEffect, useState } from 'react';
 
 const Board = ({ boardSize, mineNum, backToHome }) => {
     const [board, setBoard] = useState([]);                     // An 2-dimentional array. It is used to store the board.
-    const [nonMineCount, setNonMineCount] = useState(0);        // An integer variable to store the number of cells whose value are not '💣'.
+    const [nonMineCount, setNonMineCount] = useState(1);        // An integer variable to store the number of cells whose value are not '💣'.
     const [mineLocations, setMineLocations] = useState([]);     // An array to store all the coordinate of '💣'.
     const [gameOver, setGameOver] = useState(false);            // A boolean variable. If true, means you lose the game (Game over).
     const [remainFlagNum, setRemainFlagNum] = useState(0);      // An integer variable to store the number of remain flags.
@@ -27,7 +27,12 @@ const Board = ({ boardSize, mineNum, backToHome }) => {
         // Calling the function
         freshBoard();
     }, []);
-
+    useEffect(() => {
+        if (nonMineCount == 0) {
+            setGameOver(true);
+            setWin(true);
+        }
+    })
     // Creating a board
     const freshBoard = () => {
         const newBoard = createBoard(boardSize, mineNum);
@@ -78,13 +83,13 @@ const Board = ({ boardSize, mineNum, backToHome }) => {
         // Hint: If `Hit the mine`, check ...?
         //       Else if `Reveal the number cell`, check ...?
         // Reminder: Also remember to handle the condition that after you reveal this cell then you win the game.
-        if (board[x][y].value === '💣')
-            setGameOver(true);
-        else {
-            if (nonMineCount == 1) {
-                setGameOver(true);
-                setWin(true);
+        if (board[x][y].value === '💣') {
+            for (let i = 0; i < mineLocations.length; i++) {
+                board[mineLocations[i][0]][mineLocations[i][1]].revealed = true
             }
+            setGameOver(true);
+        }
+        else {
             let outcome = revealed(board, x, y, nonMineCount);
             setBoard(outcome.board);
             setNonMineCount(outcome.newNonMinesCount);
