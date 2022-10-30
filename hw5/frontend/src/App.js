@@ -46,7 +46,7 @@ function App() {
   const gameMode = (
     <>
       <p>Guess a number between 1 to 100</p>
-      <input onChange={handleNum}></input>
+      <input value={number} onChange={handleNum}></input>
       <button onClick={handleGuess} disabled={!number}>guess!</button>
       <p>{status}</p>
     </>
