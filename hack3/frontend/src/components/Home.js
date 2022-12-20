@@ -63,7 +63,7 @@ function Home() {
   );
   
   // TODO 6.5 Logic of subscription
-  /*useEffect(
+  useEffect(
     () => {
       subscribeToMore({
         document: ITEM_DELETED_SUBSCRIPTION,
@@ -71,13 +71,13 @@ function Home() {
           if (!subscriptionData.data) return prev;
           const deletedItem = subscriptionData.data.itemDeleted;
           return {
-            items: [...prev.items]
+            items: prev.items.filter((item) => (item.id !== deletedItem)),
           };
         },
       });
     },
     [subscribeToMore],
-  );*/
+  );
   // TODO 6.5 End 
 
   if (loading) return <p>Loading...</p>;
