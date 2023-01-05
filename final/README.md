@@ -33,7 +33,7 @@ Mongoose		Database
 1. 在 `final` 目錄執行 `yarn`
 2. 在 `final/frontend` 目錄執行 `yarn`
 3. 在 `final/backend` 目錄執行 `yarn`
-4. 在 `final/backend` 目錄修改 `.env.default`
+4. 在 `final/backend` 目錄修改 `.env.defaults`
 5. 在 `final/backend` 目錄執行 `yarn server`
 6. 在 `final/frontend` 目錄執行 `yarn start`
 
