@@ -29,6 +29,30 @@ Express 			後端 server
 Nodemon 		自動 restart server
 Babel			版本管理
 Mongoose		Database
+## 安裝步驟
+1. 在 `final` 目錄執行 `yarn`
+2. 在 `final/frontend` 目錄執行 `yarn`
+3. 在 `final/backend` 目錄執行 `yarn`
+4. 在 `final/backend` 目錄修改 `.env.default`
+5. 在 `final/backend` 目錄執行 `yarn server`
+6. 在 `final/frontend` 目錄執行 `yarn start`
+
+## 分工
+**B10902024 林宸宇：**
+- 前端架構
+- 功能發想
+- report 撰寫
+- 影片錄製
+
+**B10902074 李佳謙：**
+- 前端設計（css）
+- deploy
+- 影片錄製
+
+**B10902037 羅煜翔：**
+- 後端架構
+- 前後端連結
+
 ## 心得
 B10902024 林宸宇：
 有別於平常交作業時自己一人從前端刻到後端，這次的 project 我們在分工上相當之明確，卻由於經驗不足以及最一開始沒設想好的緣故，常常發生前後端認知不同，導致我想要的 feature 後端沒做，卻多做了一些我用不上的 feature。甚至光在前端的分工上，有時我在沒有溝通好的情況下加了一個功能，害得同學廢寢忘食刻的 css 付諸流水。辛苦歸辛苦，這次 final project 還是讓我受益良多，不單單是前端技術上的成長，更認知到團隊合作時，清楚向對方表達自己需求的重要性。謝謝組員的配合與包容，更感謝老師以及助教團隊這一學期以來的教導。
