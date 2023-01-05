@@ -37,6 +37,10 @@ Mongoose		Database
 5. 在 `final/backend` 目錄執行 `yarn server`
 6. 在 `final/frontend` 目錄執行 `yarn start`
 
+## 雲端部署需求
+由於我們是用railway deploy，時間上可能有限，屆時如果無法成功連上，再請老師或助教團隊透過我的 email 帳號（以下附上）和我聯繫，謝謝！
+leolin0904@gmail.com
+
 ## 分工
 **B10902024 林宸宇：**
 - 前端架構
